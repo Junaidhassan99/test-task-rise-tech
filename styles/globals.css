@@ -5,3 +5,17 @@
 html,
 body {
 }
+
+.horizontal-padding{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.primary-background-color{
+    background-color: #00CC1F;
+    color: #FFFFFFF7;
+}
+
+.primary-text-color{
+    color: #00CC1F;
+}
