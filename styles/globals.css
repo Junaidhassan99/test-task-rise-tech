@@ -4,6 +4,7 @@
 
 html,
 body {
+    min-width:625px;   
 }
 
 .horizontal-padding{

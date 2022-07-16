@@ -4,6 +4,11 @@ import Image from "next/image";
 import { Fragment } from "react";
 import styles from "../styles/Home.module.css";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAppleAlt } from "@fortawesome/free-solid-svg-icons";
+
+// import { FaRocket } from '../public/apple-brands.svg ';
+
 const AppBarButton: React.FC<{
   title: string;
   className?: string;
@@ -17,7 +22,7 @@ const ComponentWithBackgroundImage: React.FC<{
   className?: string;
 }> = ({ imagePath, className = "", children }) => {
   return (
-    <div className="horizontal-padding-left flex flex-row  justify-between">
+    <div className="horizontal-padding-left flex flex-row justify-between items-center">
       {children}
       <Image
         // loader={myLoader}
@@ -25,7 +30,7 @@ const ComponentWithBackgroundImage: React.FC<{
         alt={imagePath}
         width={800}
         height={590}
-        objectFit="none"
+        objectFit="fill"
       />
     </div>
   );
@@ -34,7 +39,11 @@ const ComponentWithBackgroundImage: React.FC<{
 const ButtonCard: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
-  return <button className="primary-background-color rounded-sm px-2 py-1">{children}</button>;
+  return (
+    <button className="primary-background-color rounded-sm px-6 py-1">
+      {children}
+    </button>
+  );
 };
 
 const Home: NextPage = () => {
@@ -66,15 +75,25 @@ const Home: NextPage = () => {
       <section>
         <ComponentWithBackgroundImage imagePath="/../public/img-1.png">
           <div className="flex flex-col">
-            <div>Urbane</div>
-            <div>Messaging Now</div>
-            <div>got the next level</div>
-            <div>
+            <div className="primary-text-color text-4xl py-2">Urbane</div>
+            <div className="text-4xl py-2">
+              Messaging now got the next level
+            </div>
+            <div className="py-2">
               Best in class live platform for the better customer relation
               managment
             </div>
-            <ButtonCard>Urbane</ButtonCard>
-            <ButtonCard>Urbane</ButtonCard>
+            <div className="py-2 flex flex-row">
+              <ButtonCard>
+                <div className="flex flex-row items-center">
+                  {/* <Image src="/../public/apple-brands.svg" alt={'oka'} height={30} width={30} /> */}
+                  {/* <FontAwesomeIcon icon="fa-brands fa-apple" /> */}
+                  <div>App Store</div>
+                </div>
+              </ButtonCard>
+              <div className="mx-2" />
+              <ButtonCard>Google Play</ButtonCard>
+            </div>
           </div>
         </ComponentWithBackgroundImage>
       </section>
