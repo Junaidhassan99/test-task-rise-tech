@@ -183,7 +183,7 @@ const Home: NextPage = () => {
 
       <section>
         <ComponentWithBackgroundImage
-          imagePath="/../public/img-11.jpg"
+          imagePath="/../public/img-1_cleanup.png"
           alignItems="items-start"
         >
           <div className="flex flex-col">
@@ -234,7 +234,7 @@ const Home: NextPage = () => {
 
       <section>
         <ComponentWithBackgroundImage
-          imagePath="/../public/img-8.jpg"
+          imagePath="/../public/img-2_cleanup.png"
           alignItems="items-end"
         >
           <div className="text-white">
@@ -266,7 +266,7 @@ const Home: NextPage = () => {
           <div>
             <Image
               src={"/../public/img-3.png"}
-              alt={"/../public/img-3.jpg"}
+              alt={"/../public/img-3.png"}
               height={725}
               width={525}
               objectFit="contain"
@@ -351,8 +351,11 @@ const Home: NextPage = () => {
       </section>
 
       <section>
-        <div className="horizontal-padding bg-gray-100 py-8 flex flex-row justify-between">
-          <div className="flex flex-col justify-center w-96">
+      <ComponentWithBackgroundImage
+          imagePath="/../public/img-5_cleanup.png"
+          alignItems="items-start"
+        >
+           <div className="flex flex-col justify-center w-96">
             <div className="text-2xl py-2">
               Urbane Messaging now got the next level
             </div>
@@ -365,6 +368,9 @@ const Home: NextPage = () => {
               <ButtonCard>Know More</ButtonCard>
             </div>
           </div>
+        </ComponentWithBackgroundImage>
+        {/* <div className="horizontal-padding bg-gray-100 py-8 flex flex-row justify-between">
+         
           <div className="px-2"></div>
           <div className="flex flex-row">
             <Image
@@ -375,7 +381,7 @@ const Home: NextPage = () => {
               objectFit="contain"
             />
           </div>
-        </div>
+        </div> */}
       </section>
 
       <PaddingBetweenSections />
@@ -402,7 +408,7 @@ const Home: NextPage = () => {
 
       <section>
         <ComponentWithBackgroundImage
-          imagePath="/../public/img-7.jpg"
+          imagePath="/../public/img-6_cleanup.png"
           alignItems="items-start"
         >
           <div className="text-white flex flex-col items-center text-center">
