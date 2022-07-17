@@ -7,7 +7,7 @@ const ComponentWithBackgroundImage: React.FC<{
   className?: string;
 }> = ({ imagePath, className = "", children, alignItems = "" }) => {
   return (
-    <div className="relative w-full" style={{ height: 400 }}>
+    <div className="image-height relative w-full">
       {/* background image */}
       <Image src={imagePath} alt={imagePath} layout="fill" objectFit="cover" />
 

@@ -4,33 +4,53 @@
 
 html,
 body {
-    min-width:625px;   
-    padding-top:1rem;
-    padding-bottom:1.25rem;
+  min-width: 625px;
+  padding-top: 1rem;
+  padding-bottom: 1.25rem;
 }
 
-.horizontal-padding{
-    padding-left: 15%;
-    padding-right: 15%;
+.horizontal-padding {
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
-.horizontal-padding-left{
-    padding-left: 15%;
+.horizontal-padding-left {
+  padding-left: 15%;
 }
 
-.horizontal-padding-right{
-    padding-left: 15%;
-    padding-right: 15%;
+.horizontal-padding-right {
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
-.primary-background-color{
-    background-color: #00CC1F;
-    color: #FFFFFFF7;
+.primary-background-color {
+  background-color: #00cc1f;
+  color: #fffffff7;
 }
 
-.primary-text-color{
-    color: #00CC1F;
+.primary-text-color {
+  color: #00cc1f;
 }
 
+.image-height {
+  height: 400px;
+}
 
+@media only screen and (max-width: 800px) {
+  .horizontal-padding {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
+  .horizontal-padding-left {
+    padding-left: 5%;
+  }
+
+  .horizontal-padding-right {
+    padding-right: 5%;
+  }
+
+  .image-height {
+    height: 300px;
+  }
+}
