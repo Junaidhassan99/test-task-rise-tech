@@ -184,6 +184,32 @@ const Home: NextPage = () => {
           </div>
         </ComponentWithBackgroundImage>
       </section>
+
+      <section>
+        <div className="horizontal-padding flex flex-row justify-between items-center">
+          <div className="flex flex-col w-96">
+            <div className="py-2 text-2xl">
+              Real time updates and activity demographics
+            </div>
+            <div className="py-2">{`I don't knpw what to type here, so lets fill some random text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue
+        massa vel nibh interdum suscipit. Aliquam ut mi odio.`}</div>
+          </div>
+          <div className="px-2"></div>
+          <div>
+            <Image
+              src={"/../public/img-3.png"}
+              alt={"/../public/img-8.jpg"}
+              height={725}
+              width={525}
+              objectFit="contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        
+      </section>
     </Fragment>
   );
 };
