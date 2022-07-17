@@ -57,7 +57,7 @@ const Home: NextPage = () => {
 
       <section>
         <ComponentWithBackgroundImage
-          imagePath="/../public/img-1_cleanup.png"
+          imagePath="/img-1_cleanup.png"
           alignItems="items-start"
         >
           <div className="flex flex-col">
@@ -108,7 +108,7 @@ const Home: NextPage = () => {
 
       <section>
         <ComponentWithBackgroundImage
-          imagePath="/../public/img-2_cleanup.png"
+          imagePath="/img-2_cleanup.png"
           alignItems="items-end"
         >
           <div className="text-white">
@@ -141,8 +141,8 @@ const Home: NextPage = () => {
           <div className="px-2"></div>
           <div>
             <Image
-              src={"/../public/img-3.png"}
-              alt={"/../public/img-3.png"}
+              src={"/img-3.png"}
+              alt={"/img-3.png"}
               height={400}
               width={500}
               objectFit="contain"
@@ -203,8 +203,8 @@ const Home: NextPage = () => {
         <div className="horizontal-padding flex flex-col justify-center items-center text-center">
           <div className="py-2">
             <Image
-              src={"/../public/img-4.png"}
-              alt={"/../public/img-4.jpg"}
+              src={"/img-4.png"}
+              alt={"/img-4.png"}
               height={100}
               width={100}
               objectFit="contain"
@@ -230,7 +230,7 @@ const Home: NextPage = () => {
 
       <section>
         <ComponentWithBackgroundImage
-          imagePath="/../public/img-5_cleanup.png"
+          imagePath="/img-5_cleanup.png"
           alignItems="items-start"
         >
           <div className="flex flex-col justify-center w-96">
@@ -247,19 +247,6 @@ const Home: NextPage = () => {
             </div>
           </div>
         </ComponentWithBackgroundImage>
-        {/* <div className="horizontal-padding bg-gray-100 py-8 flex flex-row justify-between">
-         
-          <div className="px-2"></div>
-          <div className="flex flex-row">
-            <Image
-              src={"/../public/img-5.png"}
-              alt={"/../public/img-5.png"}
-              height={725}
-              width={525}
-              objectFit="contain"
-            />
-          </div>
-        </div> */}
       </section>
 
       <PaddingBetweenSections />
@@ -286,7 +273,7 @@ const Home: NextPage = () => {
 
       <section>
         <ComponentWithBackgroundImage
-          imagePath="/../public/img-6_cleanup.png"
+          imagePath="/img-6_cleanup.png"
           alignItems="items-start"
         >
           <div className="text-white flex flex-col items-center text-center">
