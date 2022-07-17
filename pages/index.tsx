@@ -32,20 +32,21 @@ const AppBarButton: React.FC<{
 
 const ComponentWithBackgroundImage: React.FC<{
   imagePath: string;
+  alignItems: string;
   children: React.ReactNode;
   className?: string;
-}> = ({ imagePath, className = "", children }) => {
+}> = ({ imagePath, className = "", children, alignItems = "" }) => {
   return (
-    <div className="horizontal-padding-left flex flex-row justify-between items-center">
-      {children}
-      <Image
-        // loader={myLoader}
-        src={imagePath}
-        alt={imagePath}
-        width={800}
-        height={590}
-        objectFit="fill"
-      />
+    <div className="relative w-full" style={{ height: 590 }}>
+      {/* background image */}
+      <Image src={imagePath} alt={imagePath} layout="fill" objectFit="cover" />
+
+      <div className="z-10 relative horizontal-padding h-full flex items-center">
+        {/* child */}
+        <div className={`flex flex-col w-full ${alignItems}`}>
+          <div className="w-96">{children}</div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -113,7 +114,10 @@ const Home: NextPage = () => {
       <PaddingBetweenSections />
 
       <section>
-        <ComponentWithBackgroundImage imagePath="/../public/img-1.png">
+        <ComponentWithBackgroundImage
+          imagePath="/../public/img-11.jpg"
+          alignItems="items-start"
+        >
           <div className="flex flex-col">
             <div className="primary-text-color text-4xl py-2">Urbane</div>
             <div className="text-4xl py-2">
@@ -156,6 +160,29 @@ const Home: NextPage = () => {
           <LoraLispumCard icon={faCloud} />
           <LoraLispumCard icon={faSliders} />
         </div>
+      </section>
+
+      <PaddingBetweenSections />
+
+      <section>
+        <ComponentWithBackgroundImage
+          imagePath="/../public/img-8.jpg"
+          alignItems="items-end"
+        >
+          <div className="text-white">
+            <div className="text-lg py-2">Why you need our pixel</div>
+            <div className="text-2xl py-2">
+              Unmached perfromace in highend Android range
+            </div>
+            <div className="py-2">
+              Just kidding you have to pay every month or every year to get all
+              the benifits we mentioned every where. Everything comes at a cost.
+            </div>
+            <div className="py-2">
+              <ButtonCard>Buy Now</ButtonCard>
+            </div>
+          </div>
+        </ComponentWithBackgroundImage>
       </section>
     </Fragment>
   );
