@@ -5,12 +5,7 @@ import { Fragment } from "react";
 import styles from "../styles/Home.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faApple,
-  faGooglePay,
-  faGooglePlay,
-  IconDefinition,
-} from "@fortawesome/free-brands-svg-icons";
+import { faApple, faGooglePlay } from "@fortawesome/free-brands-svg-icons";
 
 import {
   faMobileScreen,
@@ -22,134 +17,13 @@ import {
   faEnvelope,
   faNewspaper,
 } from "@fortawesome/free-regular-svg-icons";
-
-const AppBarButton: React.FC<{
-  title: string;
-  className?: string;
-}> = ({ title, className = "" }) => {
-  return <button className={`mx-4 ${className}`}>{title}</button>;
-};
-
-const ComponentWithBackgroundImage: React.FC<{
-  imagePath: string;
-  alignItems: string;
-  children: React.ReactNode;
-  className?: string;
-}> = ({ imagePath, className = "", children, alignItems = "" }) => {
-  return (
-    <div className="relative w-full" style={{ height: 590 }}>
-      {/* background image */}
-      <Image src={imagePath} alt={imagePath} layout="fill" objectFit="cover" />
-
-      <div className="z-10 relative horizontal-padding h-full flex items-center">
-        {/* child */}
-        <div className={`flex flex-col w-full ${alignItems}`}>
-          <div className="w-96">{children}</div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const ButtonCard: React.FC<{
-  children: React.ReactNode;
-  backgroundColor?: string;
-}> = ({ children, backgroundColor = "primary-background-color" }) => {
-  return (
-    <button className={`${backgroundColor} rounded-sm px-6 py-1`}>
-      {children}
-    </button>
-  );
-};
-
-const LoraLispumCard: React.FC<{
-  icon: IconDefinition;
-  rotate?: number;
-}> = ({ icon, rotate }) => {
-  return (
-    <div className="flex flex-col items-center ">
-      <div className="py-1">
-        <FontAwesomeIcon icon={icon} className="text-7xl" rotate={rotate} />
-      </div>
-      <div className="text-center text-xl py-1">Lorem Ipsum</div>
-      <p className="text-center py-1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue
-        massa vel nibh interdum suscipit. Aliquam ut mi odio.
-      </p>
-    </div>
-  );
-};
-
-const PaddingBetweenSections = () => {
-  return <div className="py-8" />;
-};
-
-const PlanCard: React.FC<{
-  children: React.ReactNode;
-}> = ({ children }) => {
-  return (
-    <div className="bg-white py-6 px-10 rounded-md shadow-lg flex flex-col items-center justify-evenly">
-      {children}
-    </div>
-  );
-};
-
-const Starsrating = () => {
-  return (
-    <div className="flex items-center mb-5">
-      <svg
-        aria-hidden="true"
-        className="w-5 h-5 text-yellow-400"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>First star</title>
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="w-5 h-5 text-yellow-400"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>Second star</title>
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="w-5 h-5 text-yellow-400"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>Third star</title>
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="w-5 h-5 text-yellow-400"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>Fourth star</title>
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-      </svg>
-      <svg
-        aria-hidden="true"
-        className="w-5 h-5 text-gray-300 dark:text-gray-500"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>Fifth star</title>
-        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-      </svg>
-    </div>
-  );
-};
+import AppBarButton from "../components/app-bar-button";
+import PaddingBetweenSections from "../components/padding-between-sections";
+import ComponentWithBackgroundImage from "../components/component-with-background-image";
+import ButtonCard from "../components/button-card";
+import LoraLispumCard from "../components/lora-lispum-card";
+import PlanCard from "../components/plan-card";
+import StarsRating from "../components/stars-rating";
 
 const Home: NextPage = () => {
   return (
@@ -253,6 +127,8 @@ const Home: NextPage = () => {
         </ComponentWithBackgroundImage>
       </section>
 
+      <PaddingBetweenSections />
+
       <section>
         <div className="horizontal-padding flex flex-row justify-between items-center">
           <div className="flex flex-col w-96">
@@ -267,13 +143,15 @@ const Home: NextPage = () => {
             <Image
               src={"/../public/img-3.png"}
               alt={"/../public/img-3.png"}
-              height={725}
-              width={525}
+              height={400}
+              width={500}
               objectFit="contain"
             />
           </div>
         </div>
       </section>
+
+      <PaddingBetweenSections />
 
       <section>
         <div className="horizontal-padding bg-gray-100 py-8 flex flex-row justify-between">
@@ -289,7 +167,7 @@ const Home: NextPage = () => {
             </p>
             <div className="flex flex-row py-2">
               <div>Have something big?</div>
-              <div className="primary-text-color px-1">Contact us</div>
+              <button className="primary-text-color px-1">Contact us</button>
             </div>
           </div>
           <div className="px-2"></div>
@@ -345,17 +223,17 @@ const Home: NextPage = () => {
             <div>CEO Marga Holdings</div>
           </div>
           <div className="py-2">
-            <Starsrating />
+            <StarsRating />
           </div>
         </div>
       </section>
 
       <section>
-      <ComponentWithBackgroundImage
+        <ComponentWithBackgroundImage
           imagePath="/../public/img-5_cleanup.png"
           alignItems="items-start"
         >
-           <div className="flex flex-col justify-center w-96">
+          <div className="flex flex-col justify-center w-96">
             <div className="text-2xl py-2">
               Urbane Messaging now got the next level
             </div>
@@ -419,7 +297,7 @@ const Home: NextPage = () => {
             </p>
             <div className="py-2 pt-4 flex flex-row">
               <div className="pt-1">
-                <Starsrating />
+                <StarsRating />
               </div>
               <div className="pl-1">(349)</div>
             </div>
